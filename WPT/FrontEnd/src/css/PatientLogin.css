@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto;
+  }
+  .text{
+    font-weight: 700;
+    font-size: 25px;
+    
+  }
+  .back-g{
+        background-color: rgb(145, 165, 224);
+  }
+  .pat-login-card{
+    height: auto;
+    width: 500px;
+  }

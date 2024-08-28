@@ -1,0 +1,12 @@
+export const BASE_ROUTE = '/';
+export const ABOUT_ROUTE = '/about';
+export const CONTACTUS_ROUTE = '/contactus';
+export const LISTMEDICAL_RECORDS_ROUTE = '/ListMeicalRecords';
+export const DOCTORS_LOGIN_ROUTE = '/loginDoctor';
+export const PATIENT_LOGIN_ROUTE = '/loginPatient';
+export const DOCTOR_REGISTER_ROUTE = '/registerDoctor';
+export const PATIENT_REGISTER_ROUTE = '/registerPatient';
+export const DOCTOR_PATIENT_TREATMENT_TABLE_ROUTE = '/doctorPatientTratmentRecord';
+export const PATIENT_TREATMENT_TABLE_ROUTE = '/patientTratmentRecord/:userId';
+export const EDIT_TREATMENT_TABLE_ROUTE = '/editTreatmentInfo/:TreatmentID';
+export const ADD_TREATMENT_TABLE_ROUTE = '/addNewTreatment';

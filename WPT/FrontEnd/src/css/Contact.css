@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto;
+  }
+.contact-page{
+    margin-top: 80px;
+}
+.contact-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 90%; /* Adjusted width */
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column; /* Column for the overall container */
+    align-items: center;
+  }
+  
+  .contact-heading {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-details {
+  
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    width: 100%; /* Ensure it takes the full width */
+  }
+  
+  .card{
+    margin: 50px;
+    width: 900px;
+    text-align: center;
+    border: none; /* Remove border for cards */
+    border-radius: 8px; /* Adjust border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for a lifted effect */
+  }
+  
+  
+  
+  
+  .contact-form-container {
+    width: 800px;
+    margin: auto;
+    border: 2px solid #ccc;
+    padding: 20px;
+    background-color: #ffffff; /* Change background color as needed */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .contact-form-container h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form-container .form-label {
+    color: #007bff;
+  }
+  
+  .contact-form-container .form-control {
+    border-radius: 5px;
+    text-align: left;
+    overflow: auto; /* Enable overflow */
+    resize: vertical; /* Allow vertical resizing for textarea */
+    height: 100px; /* Set initial height for textarea */
+  }
+  
+  .contact-form-container .btn-primary {
+    background-color: #007bff;
+    border: 1px solid #007bff; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    margin-top: 10px;
+    color: white; /* Change text color */
+  }
+  
+  .contact-form-container .btn-primary:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }
+  
+  .accordion-item {
+    margin-left: 0px;
+    width: 100%;
+  }
+  
+  #aeh {
+    margin-left: 60px;
+  }
+  
+  /* Adjusting padding for the name input */
+  #Name_Qf {
+    padding: 0;
+  }
+  
+  /* Centering the "Contact Us" heading */
+  #header_m {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Centering the FAQ section */
+  .accordion {
+    width: 100%; /* Set the width to 100% */
+    margin: auto;
+    border: 2px solid #ccc; /* Add border for the FAQ section */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  /* Custom button styles for buttons in cards */
+  .card .btn-primary {
+    background-color: #333; /* Set background color to grey-black */
+    border-color: #333; /* Set border color to match background color */
+  }
+  
+  .card .btn-primary:hover {
+    background-color: #555; /* Darken background color on hover */
+    border-color: #555; /* Darken border color on hover */
+  }
+  
+  .card .btn-primary:focus,
+  .card .btn-primary.focus {
+    box-shadow: 0 0 0 0.25rem rgba(52, 58, 64, 0.5); /* Add focus style */
+  }
+  
+  

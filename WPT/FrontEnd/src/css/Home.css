@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: Roboto;
+}
+.Home-bg-container{
+  background-image: url('../../public/images/homeTopStart.png');
+  background-size: cover;
+  height: 80vh;
+  filter: brightness(1);
+  margin-top: 74px;
+}
+.Homepage-main-title{
+  font-size: 70px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: underline;
+}
+.Homepage-main-subline{
+  font-size: 17px;
+  color: #ffffff;
+}
+
+.hero-section {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  background: linear-gradient(to right, #ECF2FF, #FBFCFF);
+  
+  
+}
+/* Text section */
+.text-section {
+  width: 60%;
+  padding: 0 32px;
+}
+.text-headline {
+  margin-bottom: 12px;
+  color: rgb(77, 75, 75);
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: .7px;
+}
+.text-title {
+  width: 500px;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+}
+.text-descritpion {
+  width: 475px;
+  margin: 32px 0;
+  color: rgb(77, 75, 75);
+  font-size: 18px;
+  letter-spacing: .7px;
+  line-height: 1.6rem;
+}
+
+.text-stats {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 48px;
+}
+.text-stats-container {
+  text-align: center;
+}
+.text-stats-container > p {
+  color: rgb(77, 75, 75);
+  font-size: 22px;
+  letter-spacing: .7px;
+}
+.text-stats-container p:first-child {
+  margin-bottom: 8px;
+  color: #1A8EFD;
+  font-size: 32px;
+  font-weight: bold;
+}
+/* Image section */
+.hero-image-section {
+  width: 40%;
+  max-width: 100%;
+  text-align: center;
+}
+.hero-image1 {
+  width: 100%;
+  height: auto;
+}
+
+.info-section {
+  padding: 0 32px;
+  text-align: center;
+  background-color: white;
+}
+.info-title-content {
+  margin: 64px 0 128px 0;
+}
+.info-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+.info-title > span {
+  position: relative;
+}
+.info-title span::before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 4px;
+  background-color: #9D2553;
+  border-radius: 8px;
+  left: 0;
+  bottom: -12px;
+}
+.info-description {
+  margin: 64px;
+  text-align: center;
+  color: rgb(77, 75, 75);
+  font-size: 18px;
+  letter-spacing: .8px;
+  line-height: 1.8rem;
+}
+/* Cards */
+.info-cards-content {
+  margin: 64px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.info-cards {
+  height: auto;
+  border: 2px solid #d7d3d3;
+  border-radius: 12px;
+  background-color: white;
+  position: relative;
+}
+.info-card-title {
+  margin: 32px 0 40px 0;
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: .8px;
+}
+.info-card-description {
+  margin: 24px;
+  color: rgb(77, 75, 75);
+  font-size: 18px;
+  letter-spacing: .8px;
+  line-height: 1.5rem;
+}
+.info-card-icon {
+  position: absolute;
+  top: -24px;
+  left: 44%;
+  padding: 10px;
+  background-color: #DCE6FF;
+  border-radius: 30px;
+}
+.info-fa-icon {
+  color: #2C96FF;
+  font-size: 24px;
+}
+
+
+
+.ba-section {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  background-color: white;
+}
+/* Image */
+.ba-image-content {
+  width: 50%;
+  max-width: 100%;
+  text-align: center;
+}
+.ba-image1 {
+  width: 80%;
+  height: auto;
+}
+/* Text */
+.ba-text-content {
+  width: 50%;
+}
+.ba-title {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: .7px;
+}
+.ba-title > span {
+  position: relative;
+}
+.ba-title span::before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 4px;
+  background-color: #9D2553;
+  border-radius: 8px;
+  left: 0;
+  bottom: -12px;
+}
+.ba-description {
+  margin: 32px 0;
+  color: #4d4b4b;
+  font-size: 18px;
+  letter-spacing: .8px;
+  line-height: 1.8rem;
+}
+/* Checks */
+.ba-checks {
+  margin: 28px 0;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: .7px;
+}

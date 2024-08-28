@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.nav-logo{
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-logo-style{
+    font-size: 30px;
+}
+
+.nav-container {
+    padding-left: 0px !important;
+    padding-right: 0 !important;
+    margin-left: 20px !important;
+    margin-right: 0 !important;
+}
+

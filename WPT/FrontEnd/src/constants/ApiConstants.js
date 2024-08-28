@@ -1,0 +1,13 @@
+export const FIRSTCARE_BASE_URL = 'http://127.0.0.1:4300';
+export const REGISTER_DOCTOR_API_ROUTE = `${FIRSTCARE_BASE_URL}/doctor/registration`;
+export const REGISTER_PATIENT_API_ROUTE = `${FIRSTCARE_BASE_URL}/patient/registration`;
+export const TREATMENT_TABLE_ROUTE = `${FIRSTCARE_BASE_URL}/patient-treatments`;
+export const GET_ALL_TREATMENT_RECORDS_API_ROUTE = `${FIRSTCARE_BASE_URL}/patient-treatments/allrecord`;
+export const TREATMENT_RECORDS_BY_PATIENT_ID_API_ROUTE = `${FIRSTCARE_BASE_URL}/patient-treatments/doctorDashboard`;
+export const PATIENT_TREATMENT_RECORDS_BY_PATIENT_ID_API_ROUTE = `${FIRSTCARE_BASE_URL}/patient-treatments/patientDashboard`;
+export const PATIENT_DETAILS_API_ROUTE = `${FIRSTCARE_BASE_URL}/patient-treatments/patientDetails`;
+export const DELETE_TREATMENT_RECORD_API_ROUTE = `${FIRSTCARE_BASE_URL}/patient-treatments`;
+export const UPDATE_TREATMENT_RECORD_API_ROUTE = `${FIRSTCARE_BASE_URL}/patient-treatments`;
+export const ADD_NEW_TREATMENT_DETAILS_API_ROUTE = `${FIRSTCARE_BASE_URL}/patient-treatments/addrecord`;
+export const DOCTOR_LOGIN_API_ROUTE = `${FIRSTCARE_BASE_URL}/doctor/login`;
+export const PATIENT_LOGIN_API_ROUTE = `${FIRSTCARE_BASE_URL}/patient/login`;

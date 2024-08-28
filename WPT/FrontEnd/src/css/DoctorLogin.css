@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto;
+  }
+  .link-button {
+    text-decoration: none; 
+    color: #000000; 
+  }
+  
+  .link-button:hover {
+    color: #0707b6; 
+  }
+  
+  .text{
+    font-weight: 700;
+    font-size: 25px;
+    
+  }
+  
+  
+  .back-g{
+    background-color: rgb(145, 165, 224);
+}
+.doc-login-card{
+  height: auto;
+  width: 500px;
+}

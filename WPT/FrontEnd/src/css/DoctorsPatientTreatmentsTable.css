@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.doc-pat-treat-table-header{
+    margin-top: 80px;
+}
+.doc-pat-treat-table-heading{
+    font-size: 40px;
+}
+.action-button-edit{
+    margin-left: 10px;
+}
