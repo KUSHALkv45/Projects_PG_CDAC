@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = 0;
+        boolean valid = false;
+
+        while (!valid) {
+            try {
+                System.out.println("Enter your number:");
+                x = sc.nextInt();
+                valid = true;  // Input is valid, exit the loop
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid integer.");
+                sc.next();  // Clear the invalid input
+            }
+        }
+
+        System.out.println("You entered: " + x);
+    }
+}
