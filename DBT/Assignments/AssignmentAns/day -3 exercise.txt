@@ -1,0 +1,106 @@
+exercise 4
+4.1
+select min(status) from supplier;
+
+---------------------------------
+
+4.2
+select min(weight) from parts;
+--------------------------------
+
+4.3
+select avg(weight) from parts;
+
+------------------------------
+
+4.4
+select qty from spj
+where `p#` = 'p1';
+
+---------------------
+
+
+4.5
+select qty , `p#` from spj;
+
+---------------------------
+
+4.6
+
+
+
+exercise -5
+
+5.1
+
+select sname,qty from supplier,spj 
+where spj.`S#` = supplier.`S#`;
+
+------------------------------------
+
+5.2
+
+select pname,qty from parts,spj
+where spj.`P#` = parts.`p#`;
+
+
+5.3
+
+select Sname,qty from projects,spj
+where spj.`S#` = projects.`p#`;
+-----------------------------------
+5.4
+
+SELECT supplier.Sname, parts.pname, projects.jname, spj.qty
+FROM supplier, parts, projects, spj
+WHERE spj.`s#` = supplier.`s#`
+  AND spj.`p#` = parts.`p#`
+  AND spj.`J#` = projects.`J#`;
+
+----------------------------------------------------------------
+
+
+5.5
+
+select sname,jname from supplier,projects
+where projects.city = supplier.city;
+
+-------------------------------------------
+
+5.6
+
+select pname , qty from parts
+where color = 'red';
+
+------------------------------
+5.7
+select qty from supplier,spj
+where supplier.`s#` = spj.`s#` and status = 20;
+
+-------------------------------------------------
+
+5.8
+
+select pname,qty from parts,spj
+where parts.`p#` = spj.`p#` and weight > 3.5;
+
+---------------------------------------------
+
+
+5.9
+
+select Jname , city from projects,spj
+where spj.`j#` = projects.`j#` and qty > 100;
+
+
+-----------------------------------------------
+
+5.10
+
+select pname,qty from parts,spj
+where parts.`p#` = spj.`p#` and weight < 5.5;
+---------------------------------------------------
+
+
+5.11
+

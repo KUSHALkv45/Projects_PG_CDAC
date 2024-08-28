@@ -1,0 +1,125 @@
+assignment - 4.1
+
+select Onum , amt , odate from orders;
+
+---------------------------------------
+
+4.2 
+
+select * from customers
+where Snum = 1001 ;
+
+------------------------------
+
+4.3
+
+select city,sname,snum,comm from salespeople; 
+
+-----------------------------------------------
+
+4.4
+
+select rating,cname from customers
+where city = 'San Jose' ;
+----------------------------------
+
+4.5
+
+select distinct Snum  from orders;
+
+---------------------------------------
+
+
+assignment 5 
+
+5.1
+
+select * from orders
+where amt > 1000;
+
+----------------------
+
+5.2
+
+select name,cities from salespeople
+where city = 'london' and comm > 10;
+
+--------------------------------------
+
+5.3
+select * from customers 
+where not rating <=100 or city = 'rome' ;
+
+--------------------------------------------
+
+5.6
+
+select * from salespeople;
+
+-------------------------------
+
+
+assignment 6
+
+6.1 
+
+select * from orders
+where odate between '1990-10-3' and '1990-10-4' ;
+
+select * from orders 
+where odate = '1990-10-3' or odate = '1990-10-4' ;
+
+---------------------------------------------------
+
+6.2
+
+SELECT c.*
+FROM customers c
+JOIN salespeople s ON c.Snum = s.SNUM
+WHERE s.Sname IN ('Peel', 'Motika');
+
+***************************************
+
+-----------------------------------------
+
+6.3
+
+select cname from customers
+where cname like 'A%" or cname like 'G%';
+
+------------------------------------------
+
+6.4
+
+select * from customers
+where Cname like 'c%';
+
+-----------------------
+
+6.5
+
+select * from orders 
+where not amt = 0  and not amt is null;
+
+
+3001	18.69	1990-10-03	2008	1007
+3003	767.19	1990-10-03	2001	1001
+3002	1900.10	1990-10-03	2007	1004
+3005	5160.45	1990-10-03	2003	1002
+3006	1098.16	1990-10-03	2008	1007
+
+
+********** doubt:
+------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+

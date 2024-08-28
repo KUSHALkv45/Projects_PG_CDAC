@@ -1,0 +1,142 @@
+assignment - 7
+
+7.1
+
+select count(*) from orders 
+group by Odate 
+having odate = '1990-10-03' ;
+
+------------------------------
+
+7.2
+
+select count(city) from customers;
+-----------------------------------
+
+7.3
+
+select min(amt) from orders,customers
+where customers.cnum = orders.cnum;
+group by orders.Cnum ;
+
+------------------------------------
+
+7.4
+
+select cname from customers
+where cname like 'G%'
+order by 1
+limit 1;
+
+--
+
+select cname from customers
+where cname like 'G%'
+order  by 1 desc
+limit 1;
+----------------------------------
+
+7.5
+
+select max(rating) from customers
+group by city;
+
+-----------------------------------
+
+7.6
+
+select distinct sname from (select sname from orders,customers
+group by odate
+having orders.cnum = customers.cnum) as n;
+
+
+----------------------------------------------
+
+exercise 8 :
+
+8.1
+
+select Onum,Snum,amt*0.12 as commision from orders;
+
+---------------------------------------------------
+
+8.2
+select concat('for the city ',city) C, concat('highest rating is ' max(rating)) R from customers 
+group by city;
+
+---------------------------------------
+
+8.3
+select rating , cname ,cnum from customers
+order by rating desc;
+
+---------------------------------------------
+
+8.4
+
+select count(onum) , odate from orders,customers
+
+group by Odate
+order by 1 desc;
+-------------------------------------------------
+
+execise 9 
+
+9.1
+
+select onum,cname from orders,customers
+where orders.cnum = customers.cnum;
+
+------------------------------------------
+
+
+9.2
+
+select sname,cname ,Onum from orders,customers,salespeople 
+where orders.Snum = customers.Snum  && customers.Snum = salespeople.Snum;
+
+---------------------------------------------------------------------------
+
+9.3
+
+SELECT CNAME,sname,comm from customers,salespeople
+where customers.Snum = salespeople.Snum && salespeople.comm > .12;
+
+--------------------------------------------------------------------
+
+9.4
+
+select comm*amt , cname from customers,salespeople,orders
+where salespeople.snum = customers.snum  && orders.Snum = customers.Snum && rating>100;
+-------------------------------------------------------
+
+
+execise 10 :
+
+SELECT DISTINCT
+    s1.sname ,
+    s2.sname 
+FROM
+    salespeople s1
+JOIN
+    salespeople s2 ON s1.city = s2.city
+WHERE
+    s1.sname < s2.sname  
+ORDER BY
+    s1.sname, s2.sname;  -- Optional: Order the results for better readability
+
+
+
+---------------------------------------------------------------------------
+
+10.2
+
+select cname , city from customers
+where rating = (select rating from customers 
+where cname = 'hoffman' )
+;
+
+---------------------------------------------
+
+
+

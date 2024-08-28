@@ -1,0 +1,76 @@
+4.1
+
+select *  from supplier 
+where status = 
+(select status from supplier 
+where sname = 'clark' ) ;
+
+
+-------------------------------
+
+select * from emp 
+where deptno =
+ (select deptno from emp 
+where ename = 'miller' );
+
+---------------------------------
+
+4.3
+select * from parts 
+where weight >
+(select sum(weight) from parts
+where  color = 'red' 
+group by color);
+
+-------------------------------
+
+4.4
+
+select * from projects 
+where city = 
+(select city from projects 
+where pname = 'tape' );
+
+-------------------------
+
+4.5
+
+select * from parts 
+where weight <
+(select sum(weight) from parts
+where  color = 'green' 
+group by color);
+
+-------------------------------
+
+
+4.6
+
+select sname from spj,supplier
+where supplier.`S#` = spj.`S#` and qty = 
+ 
+(select max(qty) from spj) ;
+
+--------------------------------
+
+4.7
+
+select sname from emp 
+where sal = 
+(select min(sal)  from emp);
+
+-----------------------------
+
+4.9
+
+select dname from emp
+where dname = 
+(select dname 
+
+****************************
+
+
+
+
+
+

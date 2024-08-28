@@ -1,0 +1,234 @@
+assignment 11 
+
+11.1
+
+select Onum from orders 
+where orders.snum = (select snum from customers  
+customers.cname = 'cisneros') ;
+
+----------------------------------------------
+
+
+11.2
+
+
+
+select cname , rating from customers
+where snum in (select snum from customers
+where rating > 
+(select avg(rating) from customers ) ) ;
+
+------------------------------------------
+
+
+11.3
+
+select sum(amt) as T from orders
+group by snum 
+having T > (select max(amt) from orders) ;
+
+
+----------------------------------------------
+
+
+
+
+assignment 12
+
+12.1
+
+
+select cname from customers
+where rating > any
+(select rating from customers
+where snum = 
+(select snum from salespeople
+where sname = 'Serres' ) ) ; 
+
+
+--
+
+
+select cname from customers 
+where rating > any
+( select rating from customers,salespeople
+where customers.snum = salespeople.snum and salespeople.sname = 'serres' );
+
+
+---------------------------------------------------------------------------
+
+12.2
+
+
+select * from salespeople
+    where snum <> all(
+    select distinct S.snum
+    from customers C left join  salespeople S
+    on C.snum = S.snum
+    where C.city = S.city);
+
+
+------------------------------------------------
+
+
+12.3
+
+
+ select amt from orders
+    where amt > any(
+    select amt from orders
+    where snum = 
+    (select distinct snum from customers
+    where city ='london')
+    );
+
+-----------------------------------------
+
+
+12.4
+
+select amt from orders
+    where amt > 
+    (select min(amt) from orders
+    where snum = 
+    (select distinct snum from customers
+    where city ='london')
+    );
+
+
+-----------------------------------------------
+
+
+assignment 13
+
+13.1
+
+select city,cname , 'higher rating' H from customers
+    where rating >= 200  
+    union 
+    select city,cname , 'lower rating' as H from customers
+    where rating < 200 ; 
+
+--------------------------------------------------------------
+
+13.2
+
+
+select sname N ,snum Num from salespeople
+where snum in
+(select snum from orders
+group by snum
+having count(onum) > 1)
+union
+select cname,cnum from customers
+where cnum 
+in
+(select cnum from orders
+group by cnum 
+having count(onum) > 1 );
+
+----------------------------------------------
+
+
+13.3
+
+
+
+select snum from salespeople
+where city = 'sanjose'
+union 
+(select cnum from customers
+union all
+select onum from orders
+where odate = '1990-10-03') ;
+
+------------------------------
+
+
+assignment 14
+
+14.1
+
+14.2
+
+delete from orders
+where cnum =
+(select cnum from customers
+where cname = 'clemens') ;
+------------------------------
+
+14.3
+
+
+update  customers
+set rating = rating + 100
+where city = 'rome' ;
+
+---------------------------
+
+14.4
+
+update customers C 
+left join salespeople S 
+on s.snum = c.snum and s.sname = 'serres' 
+set C.snum = (select snum from salespeople 
+where salespeople.sname = 'motika' ) 
+where S.sname = 'serres';
+
+
+in update stmnts we can use the same table in sub queries
+
+and we use joins
+
+
+---
+when u use left join 
+where condition has to be mentioned 
+as left join return all the values from left table 
+
+--------
+
+so we can use normal join without where clause.
+
+-----------------------------------------------------------------
+
+
+assignment - 15
+
+15.1
+
+insert into multicust
+select * from salespeople
+where snum = 
+any(select s.snum from salespeople S 
+left join customers C on 
+S.snum = C.snum
+group by S.snum
+having count(C.cnum) > 1 ); 
+
+
+----------------------------------------
+
+15.2
+
+
+---
+
+15.3
+
+
+
+update salespeople 
+set comm = comm*0.20 + comm
+where snum  in
+(
+select snum from orders
+group by snum
+having sum(amt) > 3000 );
+
+
+-----------------------------
+
+
+
+

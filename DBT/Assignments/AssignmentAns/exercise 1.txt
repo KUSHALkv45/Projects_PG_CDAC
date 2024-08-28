@@ -1,0 +1,253 @@
+mysql> CREATE TABLE SEMP (
+    ->     EMPNO CHAR(4),
+    ->     EMPNAME CHAR(20),
+    ->     BASIC FLOAT,
+    ->     DEPTNO CHAR(2),
+    ->     DEPTHEAD CHAR(4)
+    -> );
+
+-----------------------------
+
+mysql> CREATE TABLE SDEPT(
+    -> DEPTNO CHAR(2),
+    -> DEPTNAEM CHAR(15)
+    -> );
+
+-----------------------------
+
+
+
+mysql> INSERT INTO SDEPT (DEPTNO, DEPTNAME)
+    -> VALUES
+    ->     ('10', 'Development'),
+    ->     ('20', 'Training');
+
+-----------------------------------
+
+mysql> INSERT INTO SEMP (EMPNO, EMPNAME, BASIC, DEPTNO, DEPTHEAD)
+    -> VALUES
+    ->     ('0001', 'SUNIL', 6000, '10', NULL),
+    ->     ('0002', 'HIREN', 8000, '20', NULL),
+    ->     ('0003', 'ALI', 4000, '10', '0001'),
+    ->     ('0004', 'GEORGE', 6000, NULL, '0002');
+
+-------------------------------------------------------------------
+
+mysql> CREATE TABLE SUPPLIER (
+    ->     `S#` CHAR(2),                                 -- Use backticks (`) to enclose column names with special characters like `#`
+    ->     Sname VARCHAR(50),
+    ->     Status INT,
+    ->     City VARCHAR(50)
+    -> );
+
+----------------------------------------------------------------
+
+
+mysql> CREATE TABLE PROJECTS (
+    ->     `J#` CHAR(2),
+    ->     Jname VARCHAR(50),
+    ->     City VARCHAR(50)
+    -> );
+--------------------------------------------------------------------
+
+mysql> CREATE TABLE PARTS (
+    ->     `P#` CHAR(2),
+    ->     Pname VARCHAR(50),
+    ->     Color VARCHAR(20),
+    ->     Weight FLOAT,
+    ->     City VARCHAR(50)
+    -> );
+---------------------------------------------------------------------
+mysql> CREATE TABLE SPJ (
+    ->    `S#` CHAR(2),
+    ->     `P#` CHAR(2),
+    ->     `J#` CHAR(2),
+    ->     Qty INT
+    -> );
+--------------------------------------------------------
+
+
+mysql> INSERT INTO SUPPLIER (`S#`, Sname, Status, City)
+    -> VALUES
+    ->     ('S1', 'VISHAL', 10, 'NANDED'),
+    ->     ('S2', 'YASH', 20, 'SOLAPUR'),
+    ->     ('S3', 'VIRAJ', 30, 'THANE');
+
+-------------------------------------------------------------------
+
+mysql> INSERT INTO PARTS (`P#`, Pname, Color, Weight, City)
+    -> VALUES
+    ->     ('P1', 'GANJA', 'Red', 5.2, 'NANDED'),
+    ->     ('P2', 'ENGINE', 'Blue', 3.8, 'SOLAPUR'),
+    ->     ('P3', 'PAPER', 'Green', 4.5, 'THANE');
+--------------------------------------------------------------------
+
+
+mysql> INSERT INTO PROJECTS (`J#`, Jname, City)
+    -> VALUES
+    ->     ('J1', 'Project Alpha', 'NANDED'),
+    ->     ('J2', 'Project Beta', 'SOLAPUR'),
+    ->     ('J3', 'Project Gamma', 'THANE');
+
+--------------------------------------------------------------------
+
+
+mysql> INSERT INTO SPJ (`S#`, `P#`, `J#`, Qty)
+    -> VALUES
+    ->     ('S1', 'P1', 'J1', 100),
+    ->     ('S2', 'P2', 'J2', 150),
+    ->     ('S3', 'P3', 'J3', 200);
+---------------------------------------------------------------
+
+
+mysql> SELECT * FROM SUPPLIER
+    -> ;
++------+--------+--------+---------+
+| S#   | Sname  | Status | City    |
++------+--------+--------+---------+
+| S1   | VISHAL |     10 | NANDED  |
+| S2   | YASH   |     20 | SOLAPUR |
+| S3   | VIRAJ  |     30 | THANE   |
++------+--------+--------+---------+
+
+
+------------------------------------------------------------------------
+
+
+mysql> SELECT SNAME `S#` FROM SUPPLIER;
++--------+
+| S#     |
++--------+
+| VISHAL |
+| YASH   |
+| VIRAJ  |
++--------+
+
+--------------------------------------------------------------------------
+
+mysql> SELECT SNAME ,`S#` FROM SUPPLIER;
++--------+------+
+| SNAME  | S#   |
++--------+------+
+| VISHAL | S1   |
+| YASH   | S2   |
+| VIRAJ  | S3   |
++--------+------+
+------------------------------------------------
+
+
+
+mysql> SELECT PNAME ,COLOR FROM PARTS
+    -> WHERE CITY = 'THANE' ;
++-------+-------+
+| PNAME | COLOR |
++-------+-------+
+| PAPER | Green |
++-------+-------+
+----------------------------------------------
+
+mysql> SELECT * FROM SUPPLIER
+    -> WHERE CITY = 'THANE';
++------+-------+--------+-------+
+| S#   | Sname | Status | City  |
++------+-------+--------+-------+
+| S3   | VIRAJ |     30 | THANE |
++------+-------+--------+-------+
+----------------------------------------------
+
+
+mysql> SELECT * FROM SUPPLIER
+    -> WHERE CITY = 'THANE' OR CITY = 'SOLAPUR';
++------+-------+--------+---------+
+| S#   | Sname | Status | City    |
++------+-------+--------+---------+
+| S2   | YASH  |     20 | SOLAPUR |
+| S3   | VIRAJ |     30 | THANE   |
++------+-------+--------+---------+
+
+------------------------------------------------
+
+
+mysql> SELECT * FROM PROJECTS
+    -> WHERE CITY = 'NANDED';
++------+---------------+--------+
+| J#   | Jname         | City   |
++------+---------------+--------+
+| J1   | Project Alpha | NANDED |
++------+---------------+--------+
+
+---------------------------------------------------
+
+
+
+mysql> SELECT * FROM PARTS;
++------+--------+-------+--------+---------+
+| P#   | Pname  | Color | Weight | City    |
++------+--------+-------+--------+---------+
+| P1   | GANJA  | Red   |    5.2 | NANDED  |
+| P2   | ENGINE | Blue  |    3.8 | SOLAPUR |
+| P3   | PAPER  | Green |    4.5 | THANE   |
++------+--------+-------+--------+---------+
+-----------------------------------------------------
+
+
+mysql> SELECT * FROM SUPPLIER ;
++------+--------+--------+---------+
+| S#   | Sname  | Status | City    |
++------+--------+--------+---------+
+| S1   | VISHAL |     10 | NANDED  |
+| S2   | YASH   |     20 | SOLAPUR |
+| S3   | VIRAJ  |     30 | THANE   |
++------+--------+--------+---------+
+
+
+mysql> SELECT * FROM SUPPLIER
+    -> WHERE STATUS >= 10;
++------+--------+--------+---------+
+| S#   | Sname  | Status | City    |
++------+--------+--------+---------+
+| S1   | VISHAL |     10 | NANDED  |
+| S2   | YASH   |     20 | SOLAPUR |
+| S3   | VIRAJ  |     30 | THANE   |
++------+--------+--------+---------+
+-------------------------------------------------------
+
+
+
+
+mysql> SELECT * FROM SUPPLIER;
++------+--------+--------+---------+
+| S#   | Sname  | Status | City    |
++------+--------+--------+---------+
+| S1   | VISHAL |     10 | NANDED  |
+| S2   | YASH   |     20 | SOLAPUR |
+| S3   | VIRAJ  |     30 | THANE   |
++------+--------+--------+---------+
+
+
+mysql> SELECT * FROM SUPPLIER
+    -> WHERE CITY NOT IN ('SOLAPUR' , 'THANE');
++------+--------+--------+--------+
+| S#   | Sname  | Status | City   |
++------+--------+--------+--------+
+| S1   | VISHAL |     10 | NANDED |
++------+--------+--------+--------+-
+
+------------------------------------------------------
+
+
+
+
+mysql> SELECT WEIGHT AS WEIGHT_IN_GRAMS,
+    -> WEIGHT* 1000 AS WEIGHT_IN_MILLIGRAMS,
+    -> WEIGHT/ 1000.0 AS WIGHT_IN_KILLOGRAMS
+    -> FROM PARTS;
++-----------------+----------------------+----------------------+
+| WEIGHT_IN_GRAMS | WEIGHT_IN_MILLIGRAMS | WIGHT_IN_KILLOGRAMS  |
++-----------------+----------------------+----------------------+
+|             5.2 |    5199.999809265137 | 0.005199999809265137 |
+|             3.8 |    3799.999952316284 | 0.003799999952316284 |
+|             4.5 |                 4500 |               0.0045 |
++-----------------+----------------------+----------------------+
+
+-------------------------------------------------------------------------
