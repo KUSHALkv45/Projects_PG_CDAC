@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>question 3</title>
+</head>
+<body>
+    <select id = "s">
+        <option value = "option1">
+            option1
+        </option>
+        <option value = "option2">
+            option2
+        </option>
+        <option value = "option3">
+            option3
+        </option>
+
+    </select>
+    <input type="button" value="delete" onclick="deleteoption()">
+
+
+
+    <script>
+        function deleteoption ()
+        {
+        var selecte = document.getElementById("s");
+        var selected = selecte.selectedIndex;
+        if(selected !== -1)
+        {
+            selecte.remove(selected) ;
+        }
+        }
+
+    </script>
+</body>
+</html>

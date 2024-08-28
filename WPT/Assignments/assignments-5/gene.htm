@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        #container
+        {
+            display : flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        input{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+        <input type="text"  placeholder="phonenumber" id="newinput">
+        <input type="button" value="+" onclick="generate()" >
+        <input type="button" value="-" onclick="remove()" >
+        <div id="container">
+
+        </div>
+
+   
+    <script>
+        function generate()
+        {
+            const container = document.getElementById("container");
+            const newinput = document.createElement("input");
+            newinput.setAttribute("type","text"); // Assign a new value to the mentioned attribute
+            newinput.setAttribute("placeholder","enter phone");
+         container.appendChild(newinput);
+
+        }
+        function remove()
+        {
+            const container = document.getElementById("container");
+            
+             // Assign a new value to the mentioned attribute
+             const lastInput = container.lastChild;
+            if (lastInput !== null && lastInput.nodeName === "INPUT") {
+                container.removeChild(lastInput);
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <style>
+
+    
+    .sp
+    {
+        color : black;
+    }
+    .highlight {
+        color: pink;
+    }
+    </style>
+</head>
+<body>
+    <div style="background-color: black;">
+
+
+    <p id="mp" style="color: blue;">
+        On mouse over here bold words of the para will be highlighted
+
+    </p>
+    <p id ="chp" style="color: white;"> <span class = "sp" >hi this is</span > Sunday so go out and relax 
+    <span class="sp">
+        that's the end
+    </span></p>
+    </div>
+
+    <script>
+       // Get the paragraph element
+    var para1 = document.getElementById("mp");
+    var para2 = document.getElementById("chp");
+
+    // Get all spans inside the second paragraph
+    var spans = para2.getElementsByTagName("span");
+
+    // Add event listener to the first paragraph
+    para1.addEventListener("mouseover", function() {
+        // Loop through spans and add the highlight class
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].classList.add("highlight");
+        }
+    });
+
+    // Remove the highlight class on mouseout
+    para1.addEventListener("mouseout", function() {
+        // Loop through spans and remove the highlight class
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].classList.remove("highlight");
+        }
+    });
+    </script>
+</body>
+</html>

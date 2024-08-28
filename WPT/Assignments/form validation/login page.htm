@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <style>
+            body
+            {
+               background-color: skyblue;
+            }
+            #login-box
+            {
+                 background-color: white;
+                 width: 450px;
+                 height: 450px;
+                 margin : 200px auto;      /* if kept complete auto but vertically we have infinite space so it wont work so it works for L R only */
+                 text-align: center;
+            }
+            #h1
+            {
+                padding-top: 40px;
+            }
+            input
+            {
+              width: 65%; 
+              outline-width: 0;
+              margin-bottom : 10px;
+              background-color:white;
+              border : none;
+              border-bottom-width: 2px;
+              border-bottom-color: green;
+
+              
+            }
+            button
+            {
+                width : 40%;
+
+            }
+
+        </style>
+    </head>
+    <title> login page</title>
+    <body>
+   <div id = "login-box">
+    <h1> LOGIN </h1>
+    <form> 
+        <input type="text" placeholder="enter name" >
+        <input type="text" placeholder="enter password" > <br> 
+        <button type="submit">LOGIN</button>  
+        <p> Need account </p> 
+        <button type = "submit"> sign up </button>
+    </form>
+   </div>     
+    </body>
+
+</html>

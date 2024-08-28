@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <link  rel ="stylesheet" type="text/css" href="stylec.css" >
+</head>
+<body>
+    <div id="md"> 
+
+   
+    <div id = "calci">
+        <input id = "answer" type="text" value="0"><br><br>
+        <div class="ib">
+            <input  type="button" value = "1" onclick="appendValue('1')"> 
+            <input  type="button" value = "2" onclick="appendValue('2')"> 
+            <input  type="button" value = "3" onclick="appendValue('3')"> 
+            <input  type="button" value = "+" onclick="appendValue('+')" > 
+              
+        </div>
+        
+        <div class="ib">
+            <input  type="button" value = "4" onclick="appendValue('4')"> 
+            <input  type="button" value = "5" onclick="appendValue('5')"> 
+            <input  type="button" value = "6" onclick="appendValue('6')"> 
+            <input  type="button" value = "-" onclick="appendValue('-')">
+            
+        </div>
+        
+        <div class="ib">
+              <input  type="button" value = "7" onclick="appendValue('7')"> 
+              <input  type="button" value = "8" onclick="appendValue('8')"> 
+              <input  type="button" value = "9" onclick="appendValue('9')">
+              <input  type="button" value = "0" onclick="appendValue('0')">
+              
+        </div>
+        
+        <div class="ib">
+            <input  type="button" value = "." onclick="appendValue('.')"> 
+            <input  type="button" value = "/" onclick="appendValue('/')"> 
+            <input  type="button" value = "res" onclick="reset()"> 
+            
+            <input  type="button" value = "x" onclick="appendValue('*')">
+
+            
+        </div>
+        <input  type="button" value = "=" onclick="cal()">
+    </div>
+         
+      <script>
+        function appendValue(value)
+        {
+            var result = document.getElementById("answer");
+            if(result.value === "0")
+            {
+              result.value = value;
+            }
+            else
+            {
+                result.value += value;
+            }
+
+        }
+        function cal()
+        {
+            var expression = document.getElementById("answer") ;
+            var result = eval(expression.value);
+            expression.value = result;
+        }
+        function reset()
+        {
+            var answerfield = document.getElementById("answer");
+            answerfield.value = "0";
+        }
+        
+      </script>
+
+    </div>
+</div>
+</body>
+</html>

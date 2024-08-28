@@ -1,0 +1,161 @@
+h2{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 10;
+    font-style: normal;
+    font-variant: small-caps;
+    font-size: 2em;
+    /* iem = 16px; */
+    font-style: italic;
+
+  }
+  #textcss
+  {
+    font-family: "Poetsen One", sans-serif;
+    color: violet;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    direction: ltr;
+    /* text-indent: 50px; */
+    /* we are gng to use align so commneting text-indent: ; */
+    text-align: left;
+    text-transform: uppercase;
+
+  }
+  a:link
+  {
+    color:red;
+  }
+  a:visited
+  {
+    color:green
+  }
+  a:hover
+  {
+    color: blue;
+  }
+  a:active
+  {
+    color: yellow;
+  }
+.divclass
+{
+    width: 500px;
+    height: 100px;
+    background-color: pink;
+    border-width: 5px;
+    border-color: skyblue;
+    border-style: dotted;
+    /* dashed,solid */
+    /* border: 5px,dotted,skyblue; */
+    border-radius: 5px;
+}
+
+#box
+{
+   margin-top: 100px;
+    width: 500px;
+    height: 100px;
+    background-color: red;
+    
+
+}
+input
+{
+    /* padding-left: 10px; */
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+    /* padding: 5px; */
+      padding: 5px 5px;   /* T R B L */
+
+}
+/* #para
+{
+    margin-left: 10px;
+} */
+
+#para2
+{
+    width: 200px;
+    height: 50px;
+    border: 1px solid red;
+    /* overflow: hidden; */
+    /* overflow: auto; */
+    overflow: scroll;
+}
+.father
+{
+    width: 400px;
+    height: 300px;
+    background-color: green;
+    position: relative;
+
+}
+.child1
+{
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    z-index: 1;
+    /* basically index of that 3rd dimension */
+}
+.child2
+{
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    
+}
+.child3
+{
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    
+}
+.child4
+{
+    width: 100px;
+    height: 50px;
+    background-color: orange;
+    position: absolute;
+   
+}
+
+.top
+{
+    width: 100%;
+    height: 80px;
+    /* background-color : black; */
+}
+.logo
+{
+    width: 30%;
+    line-height: 80px;
+    text-align: center;
+    background-color: skyblue;
+    float: left;
+}
+.menu
+{
+    width: 70%;
+    line-height: 45px;
+    
+    background-color: red;
+    float: right;
+}
+ul{
+    list-style: none;
+    
+
+}
+li{
+    margin-left: 100px;
+    display: inline-block;
+    /* border: 1px solid blue; */
+    padding: 2px 3px;
+}
+
+  

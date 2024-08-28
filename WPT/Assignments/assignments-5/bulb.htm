@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        #ima {
+            max-width: 100%;
+            height: auto;
+        }
+        #bb {
+            padding: 10px 20px;
+        }
+    </style> -->
+</head>
+<body>
+    <img src="Screenshot 2024-05-09 090441.png" id="ima">
+    <input type="button" value="turn off" id="bb" onclick="change()">
+
+    <script>
+        function change()
+        {
+            var img = document.getElementById("ima");
+            var button = document.getElementById("bb");
+            if(button.value === "turn off")
+            {
+                img.src = "Screenshot 2024-05-09 090508.png" ;
+                button.value = "turn on"
+            }
+            else
+            {
+                img.src = "Screenshot 2024-05-09 090441.png" ;
+                button.value = "turn off"
+            }
+            
+        }
+    </script>
+</body>
+</html>
