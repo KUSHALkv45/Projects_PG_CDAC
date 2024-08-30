@@ -1,0 +1,61 @@
+﻿@model IEnumerable<FinalProjectAtt3.Models.DoctorSchedule>
+
+@{
+    ViewBag.Title = "Doctor's Schedule";
+}
+
+<h2>Your Schedule</h2>
+
+<div class="mt-3">
+    <a href="@Url.Action("Logout", "Doctor")" class="btn btn-danger">Logout</a>
+</div>
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Date</th>
+            <th>Day</th>
+            <th>10-11 AM</th>
+            <th>11-12 AM</th>
+            <th>2-3 PM</th>
+            <th>3-4 PM</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var schedule in Model)
+        {
+            <tr>
+                <td>@schedule.Date.ToShortDateString()</td>
+                <td>@schedule.DayOfWeek</td>
+                <td style="background-color:@(!schedule.Slot1 ? "green" : "yellow"); color:white;">
+                    @(!schedule.Slot1 ? "Available" : "Unavailable")
+                </td>
+                <td style="background-color:@(!schedule.Slot2 ? "green" : "yellow"); color:white;">
+                    @(!schedule.Slot2 ? "Available" : "Unavailable")
+                </td>
+                <td style="background-color:@(!schedule.Slot3 ? "green" : "yellow"); color:white;">
+                    @(!schedule.Slot3 ? "Available" : "Unavailable")
+                </td>
+                <td style="background-color:@(!schedule.Slot4 ? "green" : "yellow"); color:white;">
+                    @(!schedule.Slot4 ? "Available" : "Unavailable")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    h2 {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .table {
+        margin-top: 20px;
+        border: 1px solid #dee2e6;
+    }
+
+    .thead-dark th {
+        background-color: #343a40;
+        color: #fff;
+    }
+</style>

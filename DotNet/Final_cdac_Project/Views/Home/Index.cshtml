@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to the Hospital Management System</h1>
+    <p class="lead">Efficiently manage appointments, treatments, and patient records all in one place.</p>
+    <hr class="my-4">
+    <p>Select your role to get started:</p>
+    <a class="btn btn-primary btn-lg" href="@Url.Action("Login", "Admin")" role="button">Admin Login</a>
+    <a class="btn btn-secondary btn-lg" href="@Url.Action("Login", "Doctor")" role="button">Doctor Login</a>
+    <a class="btn btn-success btn-lg" href="@Url.Action("Login", "Patient")" role="button">Patient Login</a>
+</div>
+
+<div class="text-center mt-5">
+    <p>Not registered yet?</p>
+    <a class="btn btn-info btn-lg" href="@Url.Action("Signup", "Patient")" role="button">Patient Signup</a>
+    <a class="btn btn-info btn-lg" href="@Url.Action("Signup", "Doctor")" role="button">Doctor Signup</a>
+</div>

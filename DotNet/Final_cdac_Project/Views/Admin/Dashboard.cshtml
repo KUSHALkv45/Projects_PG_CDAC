@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Admin Dashboard";
+}
+
+<h2>Admin Dashboard</h2>
+
+<div class="card-deck">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Approve Doctors</h5>
+            <p class="card-text">Review and approve pending doctor registrations.</p>
+            <a href="@Url.Action("ApproveDoctors", "Admin")" class="btn btn-primary">Approve Doctors</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Approve Appointments</h5>
+            <p class="card-text">Review and approve pending patient appointments.</p>
+            <a href="@Url.Action("ApproveAppointments", "Admin")" class="btn btn-primary">Approve Appointments</a>
+        </div>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a href="@Url.Action("Logout", "Admin")" class="btn btn-danger">Logout</a>
+</div>

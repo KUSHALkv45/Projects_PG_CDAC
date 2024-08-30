@@ -1,0 +1,64 @@
+﻿@model List<Treatment>
+
+<h2>Patient Treatments</h2>
+
+<form asp-controller="Account" asp-action="Logout" method="post" style="text-align: right;">
+    <button type="submit" class="btn btn-danger" asp-controller="Patient" asp-action="Logout">Logout</button>
+</form>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Date</th>
+            <th>Patient Id</th>
+            <th>Patient First Name</th>
+            <th>Patient Last Name</th>
+            <th>Doctor Id</th>
+            <th>Doctor First Name</th>
+            <th>Doctor Last Name</th>
+            <th>Treatment Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var treatment in Model)
+        {
+            <tr>
+                <td>@(treatment.TreatmentDate.ToShortDateString() ?? "")</td>
+                <td>@(treatment.Patient?.PatientId ?? 0)</td>
+                <td>@(treatment.Patient?.FirstName ?? "")</td>
+                <td>@(treatment.Patient?.LastName ?? "")</td>
+                <td>@(treatment.Doctor?.DoctorId ?? 0)</td>
+                <td>@(treatment.Doctor?.FirstName ?? "")</td>
+                <td>@(treatment.Doctor?.LastName ?? "")</td>
+                <td>@(treatment.Diagnosis ?? "")</td>
+                <td><a asp-controller="Patient" asp-action="Details" asp-route-id="@treatment.TreatmentId" class="btn btn-info btn-sm">Details</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    h2 {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .table {
+        margin-top: 20px;
+        border: 1px solid #dee2e6;
+    }
+
+    .thead-dark th {
+        background-color: #343a40;
+        color: #fff;
+    }
+
+    .btn-info {
+        margin: 0;
+    }
+
+    form {
+        margin-bottom: 10px;
+    }
+</style>

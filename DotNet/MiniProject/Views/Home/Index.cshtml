@@ -1,0 +1,242 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <style>
+        .carousel-item {
+            height: 60vh;
+        }
+
+            .carousel-item img {
+                object-fit: cover;
+                height: 60vh;
+            }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .card {
+            transition: transform 0.3s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .special-section {
+            font-family: 'Lobster', cursive;
+            font-size: 1.5rem;
+            color: #343a40;
+            text-align: center;
+            margin: 2rem 0;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="text-center py-5">
+            <h1 class="display-4">Welcome to <span style="color: darkblue; font-weight: bold;">Hospital Management</span> System</h1>
+            <p class="lead">Explore the best Hospital Management experience with Motion Mint. Book your appoinement today!</p>
+        </div>
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-bs-interval="1000">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://cmshospital.in/wp-content/uploads/2021/10/Cms-Hospital.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Explore Our Fleet</h5>
+                        <p>Discover a wide range of hospital tailored to your needs.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://www.moglix.com/blog/wp-content/uploads/2021/01/blog-banner-hospital-furniture.jpg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Easy Appoinment Process</h5>
+                        <p>Book your Appoinment in just a few clicks with our user-friendly interface.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://www.actionhospital.in/public/uploads/Speciality/Critical%20Care.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Quality Management Guaranteed</h5>
+                        <p>Experience top-notch Management and support throughout your journey.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        </br>
+
+
+        <div class="special-section border rounded p-4">
+            <p>
+                MedCare offers a premier hospital management experience designed for efficiency and comfort.
+                🏥 With a diverse range of well-maintained facilities, including state-of-the-art operation theaters and comfortable patient rooms,
+                we cater to every medical need. Experience the convenience and excellence of our healthcare services.
+                ✨ At MedCare, we ensure your journey to health is smooth and memorable. 🌟
+
+            </p>
+        </div>
+        </br>
+
+
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzdzHkUtrogRFFi8Kto34XChvES6sMKunQMQ&s" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Affordable Pricing</h5>
+                        <p class="card-text">Our competitive pricing ensures you get the best value for your money.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS-LS_P9EgNyigFQQge4aenZ-EGuKW797mTA&s" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">24/7 Customer Support</h5>
+                        <p class="card-text">Our dedicated support team is available around the clock to assist you.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS-LS_P9EgNyigFQQge4aenZ-EGuKW797mTA&s" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Flexible Rental Options</h5>
+                        <p class="card-text">Choose from daily, weekly, or monthly rental plans that suit your schedule.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </br>
+
+
+    <div class="special-section">
+        <p>
+            🏥🌟"Empower Your Health: Discover, Heal, and Thrive with MedCare Hospital Management!"🌟🏥
+
+        </p>
+
+    </div>
+    </br>
+
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS-LS_P9EgNyigFQQge4aenZ-EGuKW797mTA&s" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Premium Hospital Selection</h5>
+                    <p class="card-text">Explore our range of premium Hospital, meticulously maintained for your comfort and style.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS-LS_P9EgNyigFQQge4aenZ-EGuKW797mTA&s" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Adventure Ready</h5>
+                    <p class="card-text">Discover our rugged Hospital built for all your adventurous tritment, equipped with the latest features for a thrilling experience.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS-LS_P9EgNyigFQQge4aenZ-EGuKW797mTA&s" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Comfort and Style</h5>
+                    <p class="card-text">Experience comfort and style with our range of hospital facilities designed to enhance your healthcare experience.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 MedCare Hospital. All rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Address: 123 Hospital Street, Mumbai, Maharashtra, India</p>
+                    <p>Phone: +91 8886464123</p>
+                    <p>Email: info@medcarehospital.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+            integrity="sha384-hVFv7YMuBFRFi6Fvjt3uK4L/lm/AOjPCotQfFjw/J9pIu50S6ap9kRuH6kVfww/g"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy2Fm8L+sd2au0M0PC5awIIJqj5/t9sUBH"
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+    </script>
+
+</body>
+</html>

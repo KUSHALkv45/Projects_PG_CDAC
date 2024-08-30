@@ -1,0 +1,76 @@
+﻿@model List<Treatment>
+
+<h2>Treatments</h2>
+
+<!-- Logout button -->
+<form asp-controller="Doctor" asp-action="Logout" method="post" style="text-align: right;">
+    <button type="submit" class="btn btn-danger">Logout</button>
+</form>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Date</th>
+           
+            <th>Patient First Name</th>
+            <th>Patient Last Name</th>
+            
+            <th>Doctor First Name</th>
+            <th>Doctor Last Name</th>
+            <th>Treatment Description</th>
+            <th> Update </th>
+            <th> Delete</th>
+            <th>View Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var treatment in Model)
+        {
+            <tr>
+                <td>@treatment.TreatmentDate.ToShortDateString()</td>
+
+                <td>@treatment.Patient.FirstName</td>
+                <td>@treatment.Patient.LastName</td>
+                
+                <td>@treatment.Doctor.FirstName</td>
+                <td>@treatment.Doctor.LastName</td>
+                <td>@treatment.Diagnosis</td>
+                <td>
+                    <a asp-controller="Treatments" asp-action="EditTreatment" asp-route-id="@treatment.TreatmentId" class="btn btn-warning btn-sm">Edit</a> 
+                    </td>
+
+                <td>
+                    <a asp-controller="Treatments" asp-action="DeleteTreatment" asp-route-id="@treatment.TreatmentId" class="btn btn-danger btn-sm">Delete</a> </td>
+               <td>      <a asp-controller="Treatments" asp-action="Details" asp-route-id="@treatment.TreatmentId" class="btn btn-info btn-sm">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Treatments" asp-action="AddTreatment" class="btn btn-primary">Add Treatment</a>
+
+<style>
+    h2 {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .table {
+        margin-top: 20px;
+        border: 1px solid #dee2e6;
+    }
+
+    .thead-dark th {
+        background-color: #343a40;
+        color: #fff;
+    }
+
+    .btn-info, .btn-warning, .btn-danger, .btn-primary {
+        margin: 0 5px;
+    }
+
+    form {
+        margin-bottom: 10px;
+    }
+</style>

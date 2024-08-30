@@ -1,0 +1,48 @@
+﻿@model FinalProjectAtt3.Models.Treatment
+
+@{
+    ViewBag.Title = "Add Treatment";
+}
+
+<h2>Add Treatment</h2>
+
+<form asp-action="AddTreatment" method="post">
+    <div class="form-group">
+        <label for="patientId">Patient</label>
+        <select class="form-control" id="patientId" asp-for="PatientId" required>
+            @foreach (var patient in ViewBag.Patients)
+            {
+                <option value="@patient.PatientId">@patient.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="doctorId">Doctor</label>
+        <select class="form-control" id="doctorId" asp-for="DoctorId" required>
+            @foreach (var doctor in ViewBag.Doctors)
+            {
+                <option value="@doctor.DoctorId">@doctor.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="diagnosis">Diagnosis</label>
+        <input type="text" class="form-control" id="diagnosis" asp-for="Diagnosis" required />
+        <span asp-validation-for="Diagnosis" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="prescription">Prescription</label>
+        <input type="text" class="form-control" id="prescription" asp-for="Prescription" required />
+        <span asp-validation-for="Prescription" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="treatmentDate">Treatment Date</label>
+        <input type="date" class="form-control" id="treatmentDate" asp-for="TreatmentDate" required />
+        <span asp-validation-for="TreatmentDate" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Treatment</button>
+</form>
+
+<div class="mt-3">
+    <a href="@Url.Action("Logout", "Doctor")" class="btn btn-danger">Logout</a>
+</div>
